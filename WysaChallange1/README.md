@@ -32,3 +32,6 @@ Note:  Generators are usually run using the globally-installed `sails` CLI (comm
 4. Get QuestionWithAnswers: [GET]/questiontemplate
 5. UserQuestionAnswer: [POST]/userquestionanswer
 6. UserQuestionAnswer: [GET]/userquestionanswer
+
+# Response Tepmlate 
+1. https://docs.google.com/document/d/16wFL4-TZm-tjbYECR8pCvvDpnPDIK05kL2fFleUJT-8/edit?usp=sharing
