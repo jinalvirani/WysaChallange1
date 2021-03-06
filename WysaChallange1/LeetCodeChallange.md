@@ -1,5 +1,5 @@
 #Answer
-/**
+```/**
  * Definition for a binary tree node.
  * public class TreeNode {
  *     int val;
@@ -26,4 +26,4 @@ class Solution {
                 return false;
         return (isBST(root.left,min,root.val-1) && isBST(root.right,root.val+1,max));
     }
-}
+}```
