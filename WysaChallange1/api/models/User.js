@@ -8,11 +8,10 @@
 module.exports = {
 
   attributes: {
-    email: {
+    nickname: {
       type: 'string',
       required: true,
       unique: true,
-      isEmail: true,
     },
     password: {
       type: 'string',
@@ -26,6 +25,14 @@ module.exports = {
       }
     }
   },
-
+  customToJSON: function () {
+    return _.omit(this, ['password']);
+  },
+  beforeCreate: function (user, next) {
+    user.nickname = user.nickname.toLowerCase();
+    if (!user.password) { user.password = '@wysa1234'; }
+    CipherService.hashPassword(user);
+    next();
+  },
 };
 
